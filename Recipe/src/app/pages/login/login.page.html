@@ -1,0 +1,40 @@
+<!-- Your HTML file -->
+<body>
+  <div class="container">
+    <ion-content class="ion-padding login-content">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-md="6">
+            <div class="background-half">
+              <ion-img src="https://cdn.pixabay.com/photo/2023/05/31/11/15/fish-8031138_960_720.jpg" alt="Background Image"></ion-img>
+            </div>
+          </ion-col>
+
+          <!-- Right half with login form -->
+          <ion-col size="12" size-md="6">
+            <br><br><br><br>
+            <div class="login-half">
+              <ion-card class="login-card">
+                <ion-card-header>
+                  <ion-card-title class="ion-text-center"><a>COOKBOOK</a></ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                  <app-auth-form   #loginForm (formSubmitted)="loginUser($event)" [actionButtonText]="'Login'"></app-auth-form>
+                    <div>
+                  <ion-button  expand="full" fill="clear"    routerLink="/signup">
+                    Create a new account
+                  </ion-button>
+                  <ion-button expand="full" fill="clear" routerLink="/reset-password">
+                    Forgot Password
+                  </ion-button>
+                </div>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </div>
+</body>

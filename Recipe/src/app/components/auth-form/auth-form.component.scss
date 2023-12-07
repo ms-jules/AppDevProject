@@ -1,0 +1,38 @@
+form {
+  ion-button{
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+p {
+  font-size: 0.8em;
+  color: #000000;
+}
+
+ion-label {
+  padding-bottom: 10px;
+}
+
+
+.invalid {
+  border-bottom: 1px solid #ff6153;
+}
+
+.error-message {
+  height: 25px;
+  padding: 0;
+  ion-label {
+    font-size: 60%;
+    color: #ff6153;
+  }
+  .item-inner {
+    border-bottom: 0;
+  }
+
+}

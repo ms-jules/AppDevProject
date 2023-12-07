@@ -1,0 +1,83 @@
+
+<div class="header__menu-top ">
+  <div class="menu_container">
+<ion-toolbar class="custom-toolbar">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
+</div>
+  <div class="header__logo-wrapper" ><a [routerLink]="['/home']">COOKBOOK</a></div>
+</div>
+
+
+<form (submit)="addRecipe()">
+  <ion-item>
+    <ion-label>Title</ion-label>
+    <ion-input [(ngModel)]="newRecipe.title" required></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-input [(ngModel)]="newRecipe.category" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Main</ion-label>
+    <ion-input [(ngModel)]="newRecipe.Main" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Description</ion-label>
+    <ion-textarea [(ngModel)]="newRecipe.description" required></ion-textarea>
+  </ion-item>
+
+  <!-- Ingredients -->
+  <ion-item>
+  <ion-label>Ingredients</ion-label>
+  <ion-list *ngFor="let ingredient of newRecipe.ingredients; let i = index">
+    <ion-item>
+      <ion-input [(ngModel)]="newRecipe.ingredients[i]" placeholder="Ingredient"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="addIngredient()">Add Ingredient</ion-button>
+</ion-item>
+
+<!-- Instructions -->
+  <ion-item>
+  <ion-label>Instructions</ion-label>
+  <ion-list *ngFor="let instruction of newRecipe.instructions; let i = index">
+    <ion-item>
+      <ion-input [(ngModel)]="newRecipe.instructions[i]" placeholder="Instruction"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="addInstruction()">Add Instruction</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Preparation Time</ion-label>
+    <ion-input [(ngModel)]="newRecipe.preparationTime"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Calories</ion-label>
+    <ion-input [(ngModel)]="newRecipe.calories"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Servings</ion-label>
+    <ion-input [(ngModel)]="newRecipe.servings"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Image URL</ion-label>
+    <ion-input [(ngModel)]="newRecipe.imageUrl"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>YouTube Link</ion-label>
+    <ion-input [(ngModel)]="newRecipe.youtube"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" type="submit">Add Recipe</ion-button>
+</form>

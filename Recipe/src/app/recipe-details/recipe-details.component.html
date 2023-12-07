@@ -1,0 +1,64 @@
+
+  <div class="header__menu-top ">
+    <div class="menu_container">
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  </div>
+    <div class="header__logo-wrapper" ><a [routerLink]="['/home']">COOKBOOK</a></div>
+  </div>
+
+
+<ion-content class="content-center">
+  <div class="card-container">
+  <ion-card class="recipe-card">
+    <div class="fav-button"><ion-button fill="clear" color="danger" size="small" class="favorite-button"> ADD TO FAVORITE
+      <ion-icon name="{{(recipe) ? 'heart' : 'heart-outline' }}"></ion-icon>
+    </ion-button></div>
+    <ion-card-header >
+      <ion-card-title>{{ recipe.title }} </ion-card-title>
+      
+      <ion-card-subtitle>{{ recipe.description }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content >
+      <div class="youtube-container">
+        <iframe class="youtube-frame" [src]="getYouTubeVideoUrl(recipe.youtube)" frameborder="0" allowfullscreen></iframe><br>
+      </div>
+      <div class="recipe-info ion-text-center">
+        <ion-item lines="none">
+          <ion-icon name="time-outline" slot="start"></ion-icon>
+          <ion-label>{{ recipe.preparationTime }} mins</ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-icon name="flame-outline" slot="start"></ion-icon>
+          <ion-label>{{ recipe.calories }} kcal</ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-icon name="people-outline" slot="start"></ion-icon>
+          <ion-label>Serves {{ recipe.servings }}</ion-label>
+        </ion-item>
+      </div><br>
+
+      <ion-text class="recipe-section">
+        <h2>Ingredients</h2><br>
+        <ul>
+          <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+        </ul>
+      </ion-text><br>
+
+      <ion-text class="recipe-section">
+        <h2>Instructions</h2><br>
+        <ol>
+          <li *ngFor="let step of recipe.instructions">{{ step }}</li>
+        </ol>
+      </ion-text><br><br>
+      <ion-img class="recipe-image" [src]="recipe.imageUrl" alt="Recipe Photo"></ion-img><br>
+    </ion-card-content>
+  </ion-card>
+ </div>
+ </ion-content>
