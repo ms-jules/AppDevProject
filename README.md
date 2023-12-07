@@ -10,7 +10,6 @@ Welcome to the documentation for My Recipe App! This app allows you to explore a
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Versions Used in the Project
 
@@ -42,3 +41,12 @@ Follow these instructions to get a copy of the project up and running on your lo
 3. Run Web.
 
 #Make sure that all versions are the same!
+
+#constributing
+
+Danlor D. Bautista
+Marc Daniel A. Falic
+Klarrize Mae jules Celemen
+Sean Anderson A. Agdon
+James Daniel Esguerra
+
