@@ -1,6 +1,6 @@
-# My Recipe App
+# Cookbook App
 
-Welcome to the documentation for My Recipe App! This app allows you to explore and discover a variety of delicious recipes online, manage your own cookbook, and create a personalized collection of your favorite dishes.
+Welcome to the documentation for Cookbook App! This app allows you to explore and discover a variety of delicious recipes, manage your own cookbook, and create a personalized collection of your favorite dishes.
 
 ## Table of Contents
 
@@ -20,12 +20,12 @@ Welcome to the documentation for My Recipe App! This app allows you to explore a
 
 ## Description
 
-My Recipe App is a comprehensive solution for managing and exploring recipes. Whether you're a cooking enthusiast or a professional chef, this app provides a user-friendly interface to:
+Cookbook is a comprehensive solution for managing and exploring recipes. Whether you're a cooking enthusiast or a professional chef, this app provides a user-friendly interface to:
 
 - Browse a vast collection of recipes online.
-- Create and manage your personal cookbook.
-- Save and organize your favorite recipes.
-- Search for recipes based on ingredients, cuisine, and more.
+- Create and manage your cookbook.
+- Save your favorite recipes.
+- Search for recipes based on names and categories.
 - Enjoy a seamless and responsive user experience.
 
 ## Getting Started
